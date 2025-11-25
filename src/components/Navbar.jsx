@@ -38,7 +38,7 @@ export default function Navbar() {
           href="#home"
           className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
         >
-          RP
+          <img src="/rr.png" alt="Logo" className="h-8 w-8 inline-block mr-2" />
         </a>
 
         {/* Desktop Menu */}

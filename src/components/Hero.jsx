@@ -1,9 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../data/resume';
 
+const roles = [
+  "React JS Frontend Developer",
+  "MERN Stack Developer",
+  "Full Stack Developer",
+  "Web Developer"
+];
+
 export default function Hero() {
+
+  const [text, setText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  // Typewriter effect
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const speed = deleting ? 50 : 100;
+
+    const timeout = setTimeout(() => {
+      if (!deleting) {
+        if (charIndex < currentRole.length) {
+          setText(currentRole.slice(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          setTimeout(() => setDeleting(true), 1200); // pause before deleting
+        }
+      } else {
+        if (charIndex > 0) {
+          setText(currentRole.slice(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, deleting, roleIndex]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       
@@ -37,8 +77,10 @@ export default function Hero() {
               </span>
             </h1>
 
-            <h2 className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
-              {personalInfo.role}
+            {/* 🔥 Animated Role */}
+            <h2 className="text-2xl md:text-3xl text-gray-700 mb-6 font-light">
+              {text}
+              <span className="border-r-2 border-gray-700 ml-1 animate-pulse"></span>
             </h2>
 
             <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
@@ -62,7 +104,7 @@ export default function Hero() {
 
             <a
               href="/resume.pdf"
-              target='_blank'
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full bg-white border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 hover:shadow-md transition-all flex items-center gap-2"
             >
