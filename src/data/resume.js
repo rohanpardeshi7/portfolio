@@ -86,7 +86,7 @@ export const certifications = [
     title: "MERN Stack Development",
     issuer: "WS Cube Tech",
     period: "Nov 2024 - June 2025",
-    link: "https://www.wscubetech.com/",
+    link: "https://drive.google.com/file/d/1mF-N79PlwhiQpkdfTP3mRp3sW17097vb/view?usp=drive_link",
   },
   {
     id: 2,
