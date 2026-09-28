@@ -103,7 +103,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="\Rohan_Pardeshi's_Resume.pdf"
+              href="\Rohan_Pardeshi_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full bg-white border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 hover:shadow-md transition-all flex items-center gap-2"

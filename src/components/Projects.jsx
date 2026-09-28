@@ -84,7 +84,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
                   >
-                    Live Demo <ExternalLink size={16} />
+                    Github <ExternalLink size={16} />
                   </a>
                 </div>
               </div>

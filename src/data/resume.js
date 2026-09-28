@@ -9,8 +9,7 @@ export const personalInfo = {
   email: "rohanpardeshi93@gmail.com",
   github: "https://github.com/rohanpardeshi7",
   linkedin: "https://www.linkedin.com/in/rohan-pardeshi-99a179246/",
-  about:
-    "Full Stack Developer (React / MERN) with 7+ years of professional experience in data-driven operations and cross-functional collaboration. Skilled in building responsive web applications using React, JavaScript, and modern CSS frameworks. Brings strong ownership, problem-solving ability, and production discipline to engineering teams.",
+  about: `MERN Stack Developer transitioning from 7+ years of professional experience in operations roles. Hands-on experience with React.js, Node.js, Express.js, and MongoDB, including building a full-stack application with JWT authentication and an admin panel. Strong analytical and problem-solving skills developed through handling high-volume chargeback and reconciliation work, with a focus on accuracy, clear error handling, and reliable systems.`,
 };
 
 export const experience = [
@@ -54,13 +53,13 @@ export const education = [
 export const projects = [
   {
     id: 1,
-    title: "Ecommerce Website",
+    title: "Furniture Website (Full-Stack)",
     description:
-      "Developed a responsive e-commerce website showcasing strong frontend skills. Implemented product listing, dynamic cart functionality, and user authentication.",
-    tech: ["React", "HTML", "CSS", "JavaScript","Tailwind"],
-    link: "https://ecommerce-five-lyart-56.vercel.app/",
+      "Full-stack furniture web application with a React frontend and a Node.js/Express REST API backed by MongoDB. Implemented JWT-based login/logout, and built an admin panel with secure login/logout to add, edit, and delete products and view total orders.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+    link: "https://github.com/rohanpardeshi7/furniture-website",
     image:
-      "https://public.youware.com/users-website-assets/prod/f56deba9-bc6e-4c8c-83e9-1137a4eaf366/577b1bbd4ab742ab8970ec48d16fd2f7.jpg",
+      "https://public.youware.com/users-website-assets/prod/f56deba9-bc6e-4c8c-83e9-1137a4eaf366/577b1bbd4ab742ab8970ec48d16fd2f7.jpg", // TODO: apne furniture website ka screenshot daalo
   },
 ];
 
@@ -68,16 +67,14 @@ export const skills = {
   frontend: [
     "React.js",
     "Next.js",
-    "Redux.js",
     "Tailwind CSS",
-    "Bootstrap",
     "HTML5",
     "CSS3",
-    "JavaScript",
+    "JavaScript (ES6+)",
   ],
-  backend: ["Node.js", "Express.js"],
-  database: ["MongoDB", "Firebase"],
-  tools: ["Git", "VS Code"],
+  backend: ["Node.js", "Express.js", "REST APIs", "JWT Authentication"],
+  database: ["MongoDB"],
+  tools: ["Git", "GitHub", "Vercel"],
 };
 
 export const certifications = [
