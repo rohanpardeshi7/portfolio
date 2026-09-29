@@ -57,7 +57,7 @@ export const projects = [
     description:
       "Full-stack furniture web application with a React frontend and a Node.js/Express REST API backed by MongoDB. Implemented JWT-based login/logout, and built an admin panel with secure login/logout to add, edit, and delete products and view total orders.",
     tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-    link: "https://github.com/rohanpardeshi7/furniture-website",
+    link: "https://github.com/rohanpardeshi7/full-stack-website",
     image:
       "https://public.youware.com/users-website-assets/prod/f56deba9-bc6e-4c8c-83e9-1137a4eaf366/577b1bbd4ab742ab8970ec48d16fd2f7.jpg", // TODO: apne furniture website ka screenshot daalo
   },
