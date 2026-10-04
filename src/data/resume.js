@@ -30,7 +30,7 @@ export const experience = [
     id: 1,
     company: "PathIndia Ltd",
     role: "Chargeback Specialist",
-    period: "2023 – Present",
+    period: "2018 – 2023",
     location: "Mhow, India",
     current: true,
     description: [
@@ -43,7 +43,7 @@ export const experience = [
     id: 2,
     company: "PathIndia Ltd",
     role: "Assistant, Toll Operations",
-    period: "2018 – 2023",
+    period: "2023 – Persent",
     location: "Mhow, India",
     current: false,
     description: [
@@ -55,9 +55,9 @@ export const experience = [
 ];
 
 export const internship = {
-  role: "Web Development Intern",
-  company: "Plasmid Innovation",
-  period: "Nov 2024 – Jun 2025",
+  role: "Mern Stack Development Internship",
+  company: "WScube Tech",
+  period: "Nov 2025 – Sept 2026",
   description: [
     "Built web interfaces with HTML5, CSS3, and JavaScript, tested for cross-browser compatibility.",
     "Gained hands-on experience building full-stack applications with MongoDB, Express.js, React.js, and Node.js.",
