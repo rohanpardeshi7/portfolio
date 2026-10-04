@@ -16,7 +16,7 @@ const item = {
 const Hero = () => {
   return (
     <section id="home" className="relative overflow-hidden pt-28 pb-0 md:pt-32">
-      {/* Background image with overlay (original asset, softened) */}
+      {/* Background image with overlay */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <img
           src="https://public.youware.com/users-website-assets/prod/f56deba9-bc6e-4c8c-83e9-1137a4eaf366/fa040d797ee74a5482ba40e4f9ff53e4.jpg"
@@ -24,7 +24,7 @@ const Hero = () => {
           className="h-full w-full object-cover opacity-[0.12]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/85 to-white" />
-        {/* Ambient gradient orbs — original blue/purple palette */}
+        {/* Ambient gradient orbs */}
         <div className="absolute -top-32 -right-40 h-[520px] w-[520px] rounded-full bg-blue-500/15 blur-[120px]" />
         <div className="absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full bg-purple-500/15 blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 h-72 w-72 rounded-full bg-indigo-400/10 blur-[100px]" />
@@ -134,12 +134,12 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Portrait card */}
+          {/* Portrait card — Mobile/Tablet par hidden, Desktop (lg) par visible */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92, rotate: 3 }}
             animate={{ opacity: 1, scale: 1, rotate: 2 }}
             transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto w-full max-w-sm lg:max-w-none"
+            className="relative mx-auto hidden w-full max-w-sm lg:block lg:max-w-none"
           >
             <div
               className="absolute -inset-3 rotate-6 rounded-[2rem] bg-gradient-to-br from-blue-500/25 via-indigo-400/20 to-purple-500/25 blur-[2px]"
@@ -153,13 +153,6 @@ const Hero = () => {
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/85 via-gray-900/25 to-transparent" />
-
-              {/* Monogram */}
-              {/* <div className="absolute left-6 top-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/95 shadow-soft backdrop-blur">
-                <span className="text-3xl font-extrabold text-gray-900">
-                  <span className="text-purple-600">.</span>
-                </span>
-              </div> */}
 
               {/* Floating chips */}
               <div className="animate-float absolute right-5 top-8 rounded-full bg-white/90 px-4 py-2 shadow-soft backdrop-blur">
@@ -197,7 +190,7 @@ const Hero = () => {
             transition={{
               repeat: Infinity,
               ease: "linear",
-              duration: 20, // speed adjust karne ke liye isko kam (fast) ya zyada (slow) kar sakte ho
+              duration: 20,
             }}
           >
             {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((tech, i) => (
