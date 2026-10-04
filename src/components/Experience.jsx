@@ -53,10 +53,61 @@ const Experience = () => {
           />
 
           <div className="space-y-8">
+            {/* 1. Internship (Sabse Pehle + Remote/Online Badge) */}
+            {internship && (
+              <motion.article
+                custom={0}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-60px" }}
+                className="group relative grid gap-6 rounded-[1.5rem] border border-dashed border-indigo-200 bg-indigo-50/30 p-7 transition-all duration-500 hover:border-indigo-300 hover:bg-indigo-50/60 md:grid-cols-[auto_1fr] md:gap-8 md:p-8"
+              >
+                <div className="hidden md:block">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-indigo-300 bg-white">
+                    <Award size={16} className="text-indigo-500" />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-indigo-600 shadow-soft">
+                      <CalendarDays size={12} />
+                      {internship.period}
+                    </span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
+                      Internship
+                    </span>
+                    {/* Remote / Online Badge */}
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold tracking-wider text-emerald-600">
+                      <MapPin size={12} />
+                      {internship.location || "Remote (Online)"}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-4 text-2xl font-bold text-gray-900">{internship.role}</h3>
+                  <p className="mt-1.5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-indigo-600">
+                    <Building2 size={14} />
+                    {internship.company}
+                  </p>
+
+                  <ul className="mt-5 space-y-3">
+                    {internship.description.map((point, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-gray-600">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-300" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.article>
+            )}
+
+            {/* 2 & 3. Experience Items (Assistant in Toll Operations pehle, Chargeback last me) */}
             {experience.map((job, i) => (
               <motion.article
                 key={job.id}
-                custom={i}
+                custom={i + 1}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="show"
@@ -107,49 +158,6 @@ const Experience = () => {
                 </div>
               </motion.article>
             ))}
-
-            {/* Internship */}
-            <motion.article
-              custom={2}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-60px" }}
-              className="group relative grid gap-6 rounded-[1.5rem] border border-dashed border-indigo-200 bg-indigo-50/30 p-7 transition-all duration-500 hover:border-indigo-300 hover:bg-indigo-50/60 md:grid-cols-[auto_1fr] md:gap-8 md:p-8"
-            >
-              <div className="hidden md:block">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-indigo-300 bg-white">
-                  <Award size={16} className="text-indigo-500" />
-                </div>
-              </div>
-
-              <div>
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-indigo-600 shadow-soft">
-                    <CalendarDays size={12} />
-                    {internship.period}
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-                    Internship
-                  </span>
-                </div>
-
-                <h3 className="mt-4 text-2xl font-bold text-gray-900">{internship.role}</h3>
-                <p className="mt-1.5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-indigo-600">
-                  <Building2 size={14} />
-                  {internship.company}
-                </p>
-
-                <ul className="mt-5 space-y-3">
-                  {internship.description.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-gray-600">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-300" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.article>
           </div>
         </div>
 

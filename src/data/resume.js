@@ -25,44 +25,48 @@ export const stats = [
   { value: "99%", label: "Reconciliation Accuracy" },
 ];
 
+export const internship = {
+  role: "Mern Stack Development Internship",
+  company: "WsCube Tech",
+  period: "Nov-2025 – Sept-2026",
+  location: "Remote (Online)", 
+  description: [
+  "Developed modular, reusable UI components using React.js, Tailwind CSS, and modern ES6+ standards in a fully remote agile environment.",
+  "Integrated RESTful APIs and managed application state efficiently to deliver seamless data-driven user flows.",
+  "Collaborated cross-functionally via Git/GitHub for structured code reviews, sprint workflows, and asynchronous feature delivery.",
+  "Optimized frontend performance, cross-browser compatibility, and responsive design for flawless mobile-first web experiences.",
+],
+};
+
 export const experience = [
   {
     id: 1,
-    company: "PathIndia Ltd",
-    role: "Chargeback Specialist",
-    period: "2018 – 2023",
-    location: "Mhow, India",
-    current: true,
+    role: "Assistant in Toll Operations",
+    company: "Path India Ltd.",
+    location: "Mhow / Indore, India",
+    period: "2018 – Present",
+    current: true, 
     description: [
-      "Resolve 150+ transaction disputes daily by analyzing transaction data and gathering supporting evidence.",
-      "Identify recurring dispute causes and built analysis frameworks that improved resolution accuracy.",
-      "Prepare weekly operational and data-analysis reports for senior management.",
+      "Manage high-volume operational and transactional data tracking with zero reporting discrepancies.",
+      "Execute complex Microsoft Excel data auditing workflows, formula validations (VLOOKUP, IFS), and reconciliation summaries.",
+      "Coordinate day-to-day shift toll transaction records and prepare operational audit sheets for management review.",
+      "Bridge operational discipline and structured data handling into modern web application workflows.",
     ],
   },
   {
     id: 2,
-    company: "PathIndia Ltd",
-    role: "Assistant, Toll Operations",
-    period: "2023 – Persent",
-    location: "Mhow, India",
+    role: "Chargeback Executive", 
+    company: "Previous Company Name",
+    location: "Indore, India",
+    period: "Past Period (e.g. 2016 – 2018)",
     current: false,
     description: [
-      "Reconciled 10,000+ financial transactions monthly with 99% accuracy and resolved data discrepancies.",
-      "Worked with IT and accounting teams to troubleshoot system issues and streamline transaction workflows.",
-      "Documented standard processes from operational data, which made team handovers faster.",
+      "Handled merchant chargeback disputes, transaction reconciliations, and dispute resolution workflows.",
+      "Analyzed financial records, audited case files, and coordinated with banking partners to minimize loss margins.",
+      "Maintained detailed logs and verification reports for high-volume customer dispute cases.",
     ],
   },
 ];
-
-export const internship = {
-  role: "Mern Stack Development Internship",
-  company: "WScube Tech",
-  period: "Nov 2025 – Sept 2026",
-  description: [
-    "Built web interfaces with HTML5, CSS3, and JavaScript, tested for cross-browser compatibility.",
-    "Gained hands-on experience building full-stack applications with MongoDB, Express.js, React.js, and Node.js.",
-  ],
-};
 
 export const education = [
   {
