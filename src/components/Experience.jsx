@@ -76,7 +76,7 @@ const Experience = () => {
                       {internship.period}
                     </span>
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-                      Internship
+                      Certification Course
                     </span>
                     {/* Remote / Online Badge */}
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold tracking-wider text-emerald-600">

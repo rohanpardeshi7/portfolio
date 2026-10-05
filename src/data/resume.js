@@ -26,7 +26,7 @@ export const stats = [
 ];
 
 export const internship = {
-  role: "Mern Stack Development Internship",
+  role: "Mern Stack Development ",
   company: "WsCube Tech",
   period: "Nov-2025 – Sept-2026",
   location: "Remote (Online)", 
@@ -56,9 +56,9 @@ export const experience = [
   {
     id: 2,
     role: "Chargeback Executive", 
-    company: "Previous Company Name",
-    location: "Indore, India",
-    period: "Past Period (e.g. 2016 – 2018)",
+    company: "Path India Ltd.",
+    location: "Mhow / Indore, India",
+    period: "(2018 – 2023)",
     current: false,
     description: [
       "Handled merchant chargeback disputes, transaction reconciliations, and dispute resolution workflows.",
