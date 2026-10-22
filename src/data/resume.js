@@ -44,7 +44,7 @@ export const experience = [
     role: "Assistant in Toll Operations",
     company: "Path India Ltd.",
     location: "Mhow / Indore, India",
-    period: "2018 – Present",
+    period: "2023 – Present",
     current: true, 
     description: [
       "Manage high-volume operational and transactional data tracking with zero reporting discrepancies.",
@@ -130,6 +130,7 @@ export const skills = {
   backend: ["Node.js", "Express.js", "REST APIs", "JWT Authentication"],
   database: ["MongoDB"],
   tools: ["Git", "GitHub", "VS Code", "Vercel"],
+  Cloud: ["AWS"]
 };
 
 export const marqueeItems = [

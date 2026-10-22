@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, Server, Database, Wrench, Sparkles } from "lucide-react";
+import { Code2, Server, Database, Wrench, Cloud, Sparkles } from "lucide-react";
 import { skills } from "../data/resume.js";
 
 const categories = [
@@ -31,6 +31,13 @@ const categories = [
     icon: Wrench,
     gradient: "from-slate-600 to-slate-800",
     chip: "bg-slate-50 text-slate-700 border-slate-200 group-hover:border-slate-400",
+  },
+  {
+    key: "Cloud",
+    title: "Cloud",
+    icon: Cloud,
+    gradient: "from-sky-500 to-cyan-600",
+    chip: "bg-sky-50 text-sky-700 border-sky-100 group-hover:border-sky-300",
   },
 ];
 
