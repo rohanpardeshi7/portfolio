@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, LayoutTemplate } from "lucide-react";
+import { ArrowUpRight, Github, LayoutTemplate, Palette, X } from "lucide-react";
 import { projects } from "../data/resume.js";
 
 const Projects = () => {
+  const [activeProject, setActiveProject] = useState(null);
+
   return (
     <section id="projects" className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 py-24 md:py-32">
       <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-purple-400/10 blur-[120px]" aria-hidden="true" />
@@ -63,7 +65,6 @@ const Projects = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   </>
                 ) : (
-                  /* Stylized code-window visual for the full-stack project */
                   <div className="absolute inset-0 flex flex-col p-6 md:p-8">
                     <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
                     <div className="relative flex items-center gap-2">
@@ -135,24 +136,78 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/link mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_-10px_rgba(79,70,229,0.6)] transition-all hover:shadow-[0_14px_32px_-10px_rgba(79,70,229,0.7)] hover:brightness-110"
-                >
-                  {project.image ? <LayoutTemplate size={15} /> : <Github size={15} />}
-                  {project.linkLabel}
-                  <ArrowUpRight
-                    size={15}
-                    className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
-                  />
-                </a>
+                {/* Buttons: dono ek row mein */}
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_-10px_rgba(79,70,229,0.6)] transition-all hover:shadow-[0_14px_32px_-10px_rgba(79,70,229,0.7)] hover:brightness-110"
+                  >
+                    {project.image ? <LayoutTemplate size={15} /> : <Github size={15} />}
+                    {project.linkLabel}
+                    <ArrowUpRight
+                      size={15}
+                      className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                    />
+                  </a>
+
+                  {/* Yeh button tabhi dikhega jab project mein designImages ho */}
+                  {project.designImages && project.designImages.length > 0 && (
+                    <button
+                      onClick={() => setActiveProject(project)}
+                      className="inline-flex w-fit items-center gap-2 rounded-full border border-indigo-200 bg-white px-6 py-3 text-sm font-semibold text-indigo-700 transition-all hover:bg-indigo-50"
+                    >
+                      <Palette size={15} />
+                      View Design
+                    </button>
+                  )}
+                </div>
               </div>
             </motion.article>
           ))}
         </div>
       </div>
+
+      {/* Popup: activeProject mein kuch ho tabhi dikhega */}
+      {activeProject && (
+        <div
+          onClick={() => setActiveProject(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white p-6"
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-bold text-gray-900">
+                {activeProject.title} - Design &amp; Layout
+              </h3>
+              <button
+                onClick={() => setActiveProject(null)}
+                className="rounded-full p-2 hover:bg-gray-100"
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="mt-5 space-y-6">
+              {activeProject.designImages.map((img) => (
+                <div key={img.label}>
+                  <p className="mb-2 text-sm font-semibold text-indigo-600">{img.label}</p>
+                  <img
+                    src={img.src}
+                    alt={img.label}
+                    className="w-full rounded-xl border border-gray-100"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

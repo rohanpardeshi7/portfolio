@@ -105,6 +105,10 @@ export const projects = [
     link: "https://github.com/rohanpardeshi7/furniture-website",
     linkLabel: "View on GitHub",
     image: null,
+    designImages: [
+      { src: "/designs/furniture-home.png", label: "Home Page" },
+      { src: "/designs/furniture-admin.png", label: "Admin Panel" },
+    ],
   },
   {
     id: 2,
@@ -117,12 +121,17 @@ export const projects = [
       "Dynamic cart functionality with client-side state.",
       "User authentication flows.",
     ],
+    designImages: [
+      { src: "/designs/ecommerce-home.png", label: "Home Page" },
+      { src: "/designs/ecommerce-cart.png", label: "Cart Page" },
+    ],
     tech: ["React", "HTML", "CSS", "JavaScript"],
     link: "https://ecommerce-five-lyart-56.vercel.app/",
     linkLabel: "Live Demo",
     image:
       "https://public.youware.com/users-website-assets/prod/f56deba9-bc6e-4c8c-83e9-1137a4eaf366/577b1bbd4ab742ab8970ec48d16fd2f7.jpg",
-  },
+  }
+  
 ];
 
 export const skills = {
@@ -146,3 +155,4 @@ export const marqueeItems = [
   "Git",
   "Vercel",
 ];
+
