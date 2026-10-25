@@ -48,7 +48,7 @@ const Hero = () => {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
               <span className="text-[12px] font-medium text-indigo-700">
-                Open to junior full-stack roles
+                Open to full-stack developer roles
               </span>
             </motion.div>
 
