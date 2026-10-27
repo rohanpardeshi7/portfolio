@@ -11,7 +11,7 @@ export const personalInfo = {
   email: "rohanpardeshi93@gmail.com",
   github: "https://github.com/rohanpardeshi7",
   linkedin: "https://www.linkedin.com/in/rohan-pardeshi-99a179246/",
-  resumeUrl: "/Rohan_Pardeshi_Resume.pdf",
+  resumeUrl: "/Rohan Pardeshi - Full Stack Developer Resume.pdf",
   about:
     "MERN stack developer with an MCA and 7+ years in transaction operations at PathIndia Ltd, handling high-volume financial data, disputes, and reconciliation. Built a full-stack furniture web application using React, Node.js, Express, and MongoDB, with JWT authentication and an admin panel that controls the whole site. Seeking a junior full-stack role where an operations and fintech background is an advantage.",
   heroIntro:
@@ -102,7 +102,7 @@ export const projects = [
       "Reusable React components and modular backend routes.",
     ],
     tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-    link: "https://github.com/rohanpardeshi7/furniture-website",
+    link: "https://github.com/rohanpardeshi7/full-stack-website",
     linkLabel: "View on GitHub",
     image: null,
     designImages: [
